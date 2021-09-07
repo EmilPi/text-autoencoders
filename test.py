@@ -154,7 +154,7 @@ if __name__ == '__main__':
     if args.latent_nn:
         sents = load_sent(args.data)
         z = encode(sents)
-        with open(os.path.join(args.checkpoint, args.output), 'w') as f:
+        with open(os.path.join(args.checkpoint, args.output), 'w', encoding=DEFAULT_ENCODING) as f:
             nn = NearestNeighbors(n_neighbors=args.n).fit(z)
             dis, idx = nn.kneighbors(z[:args.m])
             for i in range(len(idx)):

@@ -1,11 +1,13 @@
 from collections import Counter
+from utils import DEFAULT_ENCODING
+
 
 class Vocab(object):
     def __init__(self, path):
         self.word2idx = {}
         self.idx2word = []
 
-        with open(path) as f:
+        with open(path, encoding=DEFAULT_ENCODING) as f:
             for line in f:
                 w = line.split()[0]
                 self.word2idx[w] = len(self.word2idx)
@@ -30,6 +32,6 @@ class Vocab(object):
             n_unk -= c
         cnt['<unk>'] = n_unk
 
-        with open(path, 'w') as f:
+        with open(path, 'w', encoding=DEFAULT_ENCODING) as f:
             for w in v:
                 f.write('{}\t{}\n'.format(w, cnt[w]))
