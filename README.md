@@ -1,4 +1,6 @@
 # text-autoencoders
+This if fork of original repo, https://github.com/shentianxiao/text-autoencoders , with additions and changes by Emilis Pileckis.
+
 This repo contains the code and data of the following paper:  
 [Educating Text Autoencoders: Latent Representation Guidance via Denoising](https://arxiv.org/abs/1905.12777)  
 *Tianxiao Shen, Jonas Mueller, Regina Barzilay, and Tommi Jaakkola*
@@ -14,7 +16,7 @@ Once the model is trained, it can be used to generate sentences, map sentences t
 [![overview](https://img.youtube.com/vi/ioFQ8l-Fl7c/0.jpg)](https://www.youtube.com/watch?v=ioFQ8l-Fl7c)
 
 ## Dependencies
-The code has been tested in Python 3.7, PyTorch 1.1
+The code has been tested in Python 3.8, PyTorch 1.10.0.dev20210902+cu111
 
 ## Download data
 Download the processed Yelp and Yahoo datasets by running:
